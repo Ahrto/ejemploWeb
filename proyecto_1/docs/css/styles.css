@@ -1,0 +1,284 @@
+*{						
+	margin: 0px;
+	padding: 0px;			/*estas reglas se las aplicamos a todo el documento,sirven para eliminar margenes no 							deseados y en este caso que nos elimine los puntos de las listas*/
+	list-style: none;
+}
+
+.clearfix{   /*mirar codigo HTML linea 18*/
+	float: none;
+	clear: both; /*limpiamos lo flotado*/
+}
+/*FONDO*/
+body{
+	background: url('../img/hojas.jpg'); /*con url le indicamos donde tenemos la imagen que queremos poner, indicamos ".." porque tiene que salir al directorio padre y seleccionar la carpeta img*/
+	background-attachment: fixed; /*con esto hacemos que aunque hagamos scroll en la pagina el fondo se quede estatico*/
+}
+/*CAJA BLANCA DEL CONTENIDO GLOBAL*/
+#global{
+	width: 65%;
+	margin: 0px auto;
+	margin-top: 30px;
+	padding: 25px; /*es un margen interior*/
+	background: white;
+	box-shadow: 0px 0px 2px gray;
+}
+/*LOGO*/
+#logo{
+	display: block;
+	font-family: Verdana, Arial; /*en el caso de que no este disponible la primera fuente aplicara la segunda*/
+	font-size: 28px;
+	letter-spacing: 4px;
+	line-height: 75px;  /*es la altura de la linea*/
+	color: white;
+	text-align: center;
+	width: 385px;
+	height: 80px;
+	float: left; /*nos posiciona el elemento a la izda.*/
+	margin-bottom: 20px;
+	text-transform: uppercase; /*ponemos el texto en mayusculas*/
+}
+/*MENU NAVBAR*/
+#menu{
+	font-family: Helvetica, Arial;
+	background: #333;
+	width: 100%;
+	text-transform: uppercase; /*ponemos el texto en mayusculas*/
+	margin-bottom: 20px;
+}
+
+#menu ul{
+	line-height: 46px;
+	list-style: none;
+	transition: all 300ms; /*indicamos la transicion y el tiempo de la misma*/
+}
+
+#menu ul li{
+	height: 46px;
+	display: inline-block; /*nos coloca los elementos uno al lado de otro (de izda a dcha)*/
+}
+
+/*#menu ul li:hover{  establecemos la accion "hover", en este caso cambia de color al realizarla
+	background: #235E3D;
+}*/
+
+#menu a{
+	display: block; 
+	color: white;
+	text-decoration: none;
+	padding-left: 30px;
+	padding-right: 30px;
+}
+/*POSTS*/
+
+#content{
+	width: 97%;
+    margin: 0px auto;
+}
+
+#posts{
+	width: 60%;  /*indicamos que ocupe un 60% del espacio de la columna*/
+	float: left;
+	font-family: Helvetica, Arial;
+
+}
+
+.post{
+	padding: 7px;
+}
+
+h2{
+	font-size: 30px;
+	color: #333;
+	font-family: Helvetica, Arial;
+}
+
+.post .date{
+	display: block;
+	color: gray;
+	margin-top: 5px;
+}
+
+.post p{
+	margin-top: 10px;
+	margin-bottom: 20px;
+	line-height: 22px;
+	text-align: justify; /*justificamos el texto*/
+}
+
+.button-more{
+	font-size: 14px;
+	text-align: center;
+	border-radius: 4px;
+	display: block;
+	padding: 15px;
+	color: white;
+	text-decoration: none;
+	margin-top: 10px;
+	width: 70px; /*establecemos un tamaño relativo al contenedor que lo contiene*/
+	margin-bottom: 20px;
+}
+/*SIDEBAR*/
+#sidebar{
+	font-family: Helvetica, Arial;
+	width: 31%;
+	float: right;
+}
+
+#sidebar h4{
+	margin-top: 50px;
+	margin-bottom: 20px;
+	text-align: center;
+	line-height: 10px;
+	color: #333;
+	background: url(../img/lines.png) repeat-x;
+}
+
+#sidebar h4 span{ /*ver linea 46 codigo HTML*/
+	background: white;
+	padding: 5px;
+}
+
+#sidebar img{
+	width: 100%; /*ajustamos la imagen respecto a su contenedor*/
+}
+
+#sidebar p{
+	font-size: 15px;
+	text-align: justify;
+}
+	
+form input[type="text"],
+form input[type="password"], /*selecionamos los input y el tipo que queremos*/
+form input[type="email"],
+form input[type="number"],
+form input[type="select"]{
+	padding: 5px;
+	border-radius: 2px;
+	border:1px solid #ccc;
+	width: 80%;
+	margin-bottom: 10px;
+	margin-top: 5px;
+}
+
+form input[type="submit"]{
+	background: #eee;
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	color: #333;
+	cursor: pointer;
+}
+
+#logout{
+	text-decoration: none;
+	margin-left: 15px;
+}
+
+footer{
+	font-family: Helvetica, Arial;
+	color: white;
+	height: 47px;
+	background: rgba(51, 51, 51, 0.7);
+	margin: 0px auto;
+	width: 65%;
+	padding-left: 20px;
+	padding-right: 20px;
+	margin-top: 50px;
+	line-height: 47px;
+}
+
+.subir{
+	display: block;
+	font-family: Helvetica, Arial;
+	text-decoration: none;
+	color: white;
+	float: right;
+}
+/*SLIDER*/
+.bx-wrapper, .bx-viewport{ /*Modificamos los estilos del slider*/
+	height: 300px !important; /*Con important le indicamos que se ponga por encima de cualquiel elemento */
+	/*width: auto;*/
+	/*max-width: 900px;
+	margin: auto;*/
+}
+
+#selector-theme{
+	position: fixed;
+	top: 40%;
+	background: rgba(51, 51, 51, 0.5);
+	width: 50px;
+	height: 133px;
+}
+
+#to-green,
+#to-red,
+#to-blue,
+#to-dark{
+	width: 25px;
+	height: 25px;
+	border: 1px solid white;
+	display: block;
+	margin: 0 auto;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	cursor: pointer;
+}
+
+#to-green{
+	background: #235E3D;
+}
+
+#to-red{
+	background: #CA3413;
+}
+
+#to-blue{
+	background: #1F87C4;
+}
+
+#to-dark{
+	background: #393E46;
+}
+
+#box{
+	width: 60%;
+	float: left;
+	margin-top: 40px;
+}
+
+#acordeon{
+	margin-top: 20px;
+}
+
+#reloj{
+	font-size: 40px;
+	font-weight: bold;
+	font-family: Helvetica, Arial;
+	color: #333;
+	border: 5px dashed #333;
+	width: 30%;
+	padding: 30px;
+	margin: 0 auto;
+}
+
+#form_contact{
+	width: 50%;
+	margin-top: 15px;
+	font-family: Helvetica, Arial;
+}
+
+#form_contact label{
+	width: 100%;
+	display: block;
+	margin-top: 5px;
+}
+
+.form-error{
+	background: red;
+    color: white;
+    display: block;
+    /*float: right;*/
+    font-size: 11px;
+    padding: 10px;
+    width: 100%;
+}

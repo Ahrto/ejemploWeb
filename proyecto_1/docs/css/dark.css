@@ -1,0 +1,56 @@
+body{
+	background: #222831;
+}
+
+#global{
+	background: #393E46;
+}
+
+#logo{
+	background: #222831;
+	color: #ccc;
+}
+
+#menu a{
+	color: #ccc; 
+}
+
+#menu ul li:hover{
+	background: #222831;
+}
+
+.button-more{
+	background: #393E46;
+}
+
+.post h2{
+	color: #ccc;
+}
+
+.post p{
+	color: #ccc;
+}
+
+.button-more{
+	background: #222831;
+	color: #ccc;
+}
+
+#sidebar h4 span{
+	background: #ccc;
+}
+
+#sidebar p{
+	color: #ccc;
+}
+
+form input[type="submit"]{
+	background: #222831;
+	color: #ccc;
+}
+
+form input[type="text"],
+form input[type="password"],
+form input[type="email"]{
+	background: #ccc;
+}
